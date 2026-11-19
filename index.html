@@ -9,8 +9,8 @@
 <style>
 html{scrollbar-width:none}::-webkit-scrollbar{display:none}
 :root{--navy:#14161A;--teal:#F0A032;--ink:#14161A;--muted:#5A6472;--bg:#F2F4F7;--hot:#FF7A1A;--card:#FFFFFF;--line:rgba(20,22,26,.14)}
-*{box-sizing:border-box}body{margin:0;font:400 clamp(15px,1.05vw,20px)/1.6 Rubik,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
-.in{max-width:min(1680px,94vw);margin:0 auto;padding:0 clamp(20px,3vw,48px)}
+*{box-sizing:border-box}body{margin:0;font:400 1.05vw/1.6 Rubik,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+.in{margin:0 auto;padding:0 3vw}
 header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);z-index:10}
 header .in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px;border-bottom:1px solid var(--line)}
 .logo{display:flex;align-items:center;gap:10px;font:800 24px Rubik,sans-serif}
@@ -23,8 +23,8 @@ nav a:hover{color:var(--ink)}
 .btn.t{background:var(--teal);color:var(--navy)}.btn.w{border:2px solid rgba(255,255,255,.5);color:#fff}
 header .btn{padding:11px 20px;font-size:15px}
 .hero{background:radial-gradient(1100px 500px at 78% 18%,rgba(240,160,50,.14),transparent 60%),var(--navy);color:#fff}
-.hero .in{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;padding-top:clamp(40px,4vw,80px);padding-bottom:clamp(44px,4.5vw,84px)}
-h1{font:800 clamp(38px,3.8vw,76px)/1.05 Rubik,sans-serif;margin:0 0 18px}
+.hero .in{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;padding-top:4vw;padding-bottom:4.5vw}
+h1{font:800 3.8vw/1.05 Rubik,sans-serif;margin:0 0 18px}
 h1 span{color:var(--teal)}
 .lead{font-size:19px;color:#C9CED8;max-width:32ch;margin:0 0 28px}
 .row{display:flex;gap:12px;flex-wrap:wrap}
@@ -36,8 +36,8 @@ h1 span{color:var(--teal)}
 .pic img{width:100%;height:100%;object-fit:cover;display:block}
 .stamp{position:absolute;right:18px;top:18px;background:#fff;color:var(--navy);border-radius:18px;padding:14px 16px;font-weight:800;line-height:1.2;text-align:center}
 .stamp small{display:block;font-weight:500;font-size:12px;color:#4C6177}
-.sec{padding:clamp(48px,5vw,96px) 0}
-.sec h2{font:800 clamp(30px,2.8vw,56px)/1.1 Rubik,sans-serif;margin:0 0 12px}
+.sec{padding:5vw 0}.sec-light{background:#F2F4F7;color:#14161A}.sec-dark{background:#14161A;color:#fff}.sec-dark .sub{color:#C9CED8}.sec-dark .gar{background:#1D2026}.sec-dark .gar p{color:#C9CED8}.sec-dark .gar .num{color:var(--teal)}.sec-dark .cont div b{color:var(--teal)}footer{background:#14161A;color:#8B94A3;border-top:0}footer .slot{color:var(--hot)}
+.sec h2{font:800 2.8vw/1.1 Rubik,sans-serif;margin:0 0 12px}
 .sec .sub{color:var(--muted);margin:0 0 36px;max-width:52ch}
 .usp{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .usp div{background:var(--card);border-radius:18px;padding:22px 20px;font-size:15px;color:var(--muted);box-shadow:0 10px 30px rgba(20,22,26,.08)}
@@ -62,7 +62,7 @@ footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:700px){
  .in{padding:0 18px} header .in{height:62px} nav,.ph{display:none} .logo{font-size:20px}
  .hero .in{grid-template-columns:1fr;gap:24px;padding-top:28px;padding-bottom:30px}
- h1{font-size:36px} .lead{font-size:16px} .btn{padding:14px 18px;font-size:15px} .pic{aspect-ratio:4/3}
+ body{font-size:16px} h1{font-size:36px} .lead{font-size:16px} .btn{padding:14px 18px;font-size:15px} .pic{aspect-ratio:4/3}
  .list{display:none} .usp{grid-template-columns:1fr 1fr} .gar{grid-template-columns:1fr;padding:26px} .sec{padding:44px 0} .sec h2{font-size:28px}
 }
 </style>
@@ -86,7 +86,7 @@ footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="pic"><img src="assets/avtoservis-hero.png" alt="Мастер диагностирует автомобиль на подъёмнике в тёмном цехе с янтарной подсветкой"><div class="stamp">6 месяцев<small>гарантия</small></div></div>
 </div></section>
 
-<section class="sec" id="uslugi"><div class="in">
+<section class="sec sec-light" id="uslugi"><div class="in">
   <h2>Услуги и цены</h2>
   <p class="sub">Цена известна до начала работ: после диагностики менеджер называет точную сумму и только потом мастер начинает ремонт.</p>
   <div class="usp">
@@ -105,13 +105,13 @@ footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </div></section>
 
-<section class="sec" id="garantiya"><div class="in">
+<section class="sec sec-dark" id="garantiya"><div class="in">
   <h2>Гарантия 6 месяцев</h2>
   <p class="sub">Прописываем её в заказ-наряде, а не «на словах».</p>
   <div class="gar"><div class="num">6 мес</div><p>Гарантия на запчасти и работу фиксируется в заказ-наряде. Если что-то пойдёт не так — устраним бесплатно в течение гарантийного срока. Работаем официально, чек и договор — всегда.</p></div>
 </div></section>
 
-<section class="sec" id="kontakty"><div class="in">
+<section class="sec sec-light" id="kontakty"><div class="in">
   <h2>Записаться на сервис</h2>
   <p class="sub">Оставьте заявку — перезвоним в течение 15 минут в рабочее время и подберём удобный слот.</p>
   <div class="cont">
